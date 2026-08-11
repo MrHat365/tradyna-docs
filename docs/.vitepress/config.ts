@@ -9,7 +9,7 @@ const binanceProxy = {
 }
 
 export default defineConfig({
-  base: '/tradyna-docs/',
+  base: '/',
   lang: 'zh-CN',
   title: 'Tradyna',
   description: '多交易所永续合约 DOM 交易终端 · 用户手册',
@@ -17,7 +17,7 @@ export default defineConfig({
   lastUpdated: false,
   appearance: false,
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/tradyna-docs/brand/logo.svg' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/brand/logo.svg' }],
     [
       'link',
       {

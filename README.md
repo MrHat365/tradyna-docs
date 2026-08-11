@@ -3,7 +3,7 @@
 面向终端用户的操作文档（VitePress）。不含部署与开发内容。
 
 独立仓库：[MrHat365/tradyna-docs](https://github.com/MrHat365/tradyna-docs)  
-线上（GitHub Pages）：https://mrhat365.github.io/tradyna-docs/
+线上（GitHub Pages）：https://docs.tradyna.cc/
 
 ## 本地预览
 
@@ -23,7 +23,7 @@ npm run docs:preview   # http://127.0.0.1:4173/
 
 ## 线上发布
 
-推送到 `main` 后由 GitHub Actions 自动 `npm ci` → `docs:build` → 部署到 GitHub Pages（`base: /tradyna-docs/`）。也可在 Actions 里手动 `workflow_dispatch`。
+推送到 `main` 后由 GitHub Actions 自动 `npm ci` → `docs:build` → 部署到 GitHub Pages（`base: /`）。也可在 Actions 里手动 `workflow_dispatch`。
 
 ## 截图（可选）
 
