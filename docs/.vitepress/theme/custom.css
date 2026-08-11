@@ -1,0 +1,285 @@
+:root {
+  --vp-c-bg: #07090d;
+  --vp-c-bg-alt: #0c1017;
+  --vp-c-bg-elv: #10151e;
+  --vp-c-bg-soft: #121821;
+
+  --vp-c-border: rgba(201, 168, 108, 0.12);
+  --vp-c-divider: rgba(148, 163, 184, 0.1);
+  --vp-c-gutter: #07090d;
+
+  --vp-c-text-1: #f1ebe0;
+  --vp-c-text-2: #a8b0bd;
+  --vp-c-text-3: #6b7380;
+
+  --vp-c-brand-1: #d4b483;
+  --vp-c-brand-2: #c9a86c;
+  --vp-c-brand-3: #b8944f;
+  --vp-c-brand-soft: rgba(201, 168, 108, 0.1);
+
+  --vp-c-tip-1: #d4b483;
+  --vp-c-tip-soft: rgba(201, 168, 108, 0.1);
+  --vp-c-warning-1: #e0a45a;
+  --vp-c-warning-soft: rgba(224, 164, 90, 0.12);
+  --vp-c-danger-1: #e07a6a;
+  --vp-c-danger-soft: rgba(224, 122, 106, 0.12);
+
+  --vp-c-default-soft: rgba(148, 163, 184, 0.08);
+
+  --vp-button-brand-bg: #c9a86c;
+  --vp-button-brand-hover-bg: #d4b483;
+  --vp-button-brand-active-bg: #b8944f;
+  --vp-button-brand-text: #0a0c10;
+
+  --vp-button-alt-bg: #151b26;
+  --vp-button-alt-hover-bg: #1c2433;
+  --vp-button-alt-text: #f1ebe0;
+
+  --vp-home-hero-name-color: #f1ebe0;
+  --vp-home-hero-name-background: none;
+
+  --vp-font-family-base: 'IBM Plex Sans', 'Noto Sans SC', system-ui, sans-serif;
+  --vp-font-family-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --vp-nav-bg-color: rgba(7, 9, 13, 0.92);
+  --vp-sidebar-bg-color: #07090d;
+  --vp-code-bg: #0e131b;
+  --vp-code-block-bg: #0c1017;
+  --vp-local-nav-bg-color: rgba(7, 9, 13, 0.94);
+
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: var(--vp-c-bg);
+}
+
+.VPNavBar {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08) !important;
+  backdrop-filter: blur(12px);
+}
+
+.VPNavBar .title {
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  font-size: 0.95rem;
+}
+
+.VPNavBar .logo {
+  height: 32px !important;
+  width: 32px !important;
+  margin-right: 10px !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  object-fit: contain;
+}
+
+.VPNavBarTitle .title {
+  display: flex;
+  align-items: center;
+}
+
+/* —— 顶栏菜单：金融终端感（墨黑 + 香槟金） —— */
+.VPNavBarMenu {
+  gap: 0.15rem !important;
+}
+
+.VPNavBarMenu .VPNavBarMenuLink,
+.VPNavBarMenu .VPNavBarMenuGroup .button {
+  position: relative;
+  margin: 0 !important;
+  padding: 0 0.72rem !important;
+  height: 32px !important;
+  line-height: 32px !important;
+  border-radius: 4px;
+  font-size: 0.78rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em;
+  color: rgba(241, 235, 224, 0.62) !important;
+  transition:
+    color 0.18s ease,
+    background 0.18s ease;
+}
+
+.VPNavBarMenu .VPNavBarMenuLink:hover,
+.VPNavBarMenu .VPNavBarMenuGroup .button:hover {
+  color: #e8dfd0 !important;
+  background: rgba(201, 168, 108, 0.06);
+}
+
+.VPNavBarMenu .VPNavBarMenuLink::after {
+  content: '';
+  position: absolute;
+  left: 0.72rem;
+  right: 0.72rem;
+  bottom: 4px;
+  height: 1px;
+  background: transparent;
+  transition: background 0.18s ease, transform 0.18s ease;
+  transform: scaleX(0.55);
+  transform-origin: center;
+}
+
+.VPNavBarMenu .VPNavBarMenuLink:hover::after {
+  background: rgba(201, 168, 108, 0.55);
+  transform: scaleX(1);
+}
+
+.VPNavBarMenu .VPNavBarMenuLink.active {
+  color: #d4b483 !important;
+  background: rgba(201, 168, 108, 0.08);
+  font-weight: 560 !important;
+}
+
+.VPNavBarMenu .VPNavBarMenuLink.active::after {
+  background: #c9a86c;
+  transform: scaleX(1);
+}
+
+/* 外链「DOM 终端」：右侧细竖线分隔感，不抢 active */
+.VPNavBarMenu .VPNavBarMenuLink[href^="http"] {
+  color: rgba(212, 180, 131, 0.78) !important;
+}
+
+.VPNavBarMenu .VPNavBarMenuLink[href^="http"]:hover {
+  color: #e0c89a !important;
+}
+
+.VPNavBarMenu .VPNavBarMenuLink .icon {
+  margin-left: 0.28rem;
+  width: 10px;
+  height: 10px;
+  opacity: 0.45;
+}
+
+.VPSidebar {
+  border-right: 1px solid rgba(148, 163, 184, 0.06) !important;
+}
+
+.VPSidebarItem.level-0 > .item .text {
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--vp-c-text-3);
+  font-size: 0.68rem;
+}
+
+.VPSidebarItem.level-1 > .item .text {
+  font-weight: 400;
+  color: var(--vp-c-text-2);
+}
+
+.VPSidebarItem.level-1.is-active > .item .link {
+  color: var(--vp-c-brand-1);
+}
+
+.VPSidebarItem.level-1.is-active > .item .link::before {
+  background: var(--vp-c-brand-1);
+}
+
+.VPDoc h1 {
+  font-weight: 560;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.65rem, 2.6vw, 2rem);
+  color: var(--vp-c-text-1);
+}
+
+.VPDoc h2 {
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+  padding-top: 1.6rem;
+  margin-top: 2.75rem;
+  font-weight: 550;
+  letter-spacing: -0.01em;
+}
+
+.VPDoc h3 {
+  color: #e8dfd0;
+  font-weight: 520;
+}
+
+.VPDoc p,
+.VPDoc li {
+  line-height: 1.8;
+}
+
+.VPDoc img {
+  border-radius: 8px;
+  border: 1px solid rgba(201, 168, 108, 0.14);
+  box-shadow: none;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.VPDoc figure {
+  margin: 1.75rem 0 2.25rem;
+}
+
+.VPDoc figcaption {
+  margin-top: 0.55rem;
+  font-size: 0.82rem;
+  color: var(--vp-c-text-3);
+  letter-spacing: 0.01em;
+}
+
+.VPDoc table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.VPDoc th {
+  background: rgba(201, 168, 108, 0.06);
+  color: #e8dfd0;
+  font-weight: 520;
+}
+
+.VPDoc tr:nth-child(2n) {
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.VPDoc td,
+.VPDoc th {
+  border-color: rgba(148, 163, 184, 0.1);
+}
+
+.custom-block.tip {
+  border-color: rgba(201, 168, 108, 0.28);
+}
+
+.VPButton.brand {
+  font-weight: 520;
+  letter-spacing: 0.03em;
+  border-radius: 6px;
+}
+
+.VPButton.alt {
+  border-radius: 6px;
+}
+
+/* —— Home：自定义 HomeScreen，关掉默认 hero/features —— */
+.VPHome {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.VPHome .VPHero,
+.VPFeatures {
+  display: none !important;
+}
+
+.VPHome .VPHomeContent,
+.VPHome .vp-doc {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: none !important;
+}
+
+.VPHome .vp-doc > * {
+  margin: 0;
+}
+
+.VPHome .vp-doc :not(pre, h1, h2, h3) > code {
+  background: transparent;
+}

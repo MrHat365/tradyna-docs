@@ -1,0 +1,16 @@
+{
+  "name": "tradyna-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs --port 5173 --host 127.0.0.1",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs --port 4173 --host 127.0.0.1",
+    "screenshots": "node scripts/capture-screenshots.mjs && node scripts/capture-grid-dialogs.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.18"
+  }
+}
