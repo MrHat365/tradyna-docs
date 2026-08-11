@@ -1,41 +1,42 @@
 :root {
+  /* 墨黑层级（低剂量金：表面/边框走中性，金只留给 brand/CTA） */
   --vp-c-bg: #07090d;
-  --vp-c-bg-alt: #0c1017;
-  --vp-c-bg-elv: #10151e;
-  --vp-c-bg-soft: #121821;
+  --vp-c-bg-alt: #0b0f14;
+  --vp-c-bg-elv: #10141c;
+  --vp-c-bg-soft: #141a24;
 
-  --vp-c-border: rgba(201, 168, 108, 0.12);
-  --vp-c-divider: rgba(148, 163, 184, 0.1);
+  --vp-c-border: rgba(148, 163, 184, 0.1);
+  --vp-c-divider: rgba(148, 163, 184, 0.08);
   --vp-c-gutter: #07090d;
 
-  --vp-c-text-1: #f1ebe0;
+  --vp-c-text-1: #ebe8e2;
   --vp-c-text-2: #a8b0bd;
   --vp-c-text-3: #6b7380;
 
   --vp-c-brand-1: #d4b483;
   --vp-c-brand-2: #c9a86c;
   --vp-c-brand-3: #b8944f;
-  --vp-c-brand-soft: rgba(201, 168, 108, 0.1);
+  --vp-c-brand-soft: rgba(201, 168, 108, 0.07);
 
   --vp-c-tip-1: #d4b483;
-  --vp-c-tip-soft: rgba(201, 168, 108, 0.1);
+  --vp-c-tip-soft: rgba(201, 168, 108, 0.07);
   --vp-c-warning-1: #e0a45a;
-  --vp-c-warning-soft: rgba(224, 164, 90, 0.12);
+  --vp-c-warning-soft: rgba(224, 164, 90, 0.1);
   --vp-c-danger-1: #e07a6a;
-  --vp-c-danger-soft: rgba(224, 122, 106, 0.12);
+  --vp-c-danger-soft: rgba(224, 122, 106, 0.1);
 
-  --vp-c-default-soft: rgba(148, 163, 184, 0.08);
+  --vp-c-default-soft: rgba(148, 163, 184, 0.07);
 
   --vp-button-brand-bg: #c9a86c;
   --vp-button-brand-hover-bg: #d4b483;
   --vp-button-brand-active-bg: #b8944f;
   --vp-button-brand-text: #0a0c10;
 
-  --vp-button-alt-bg: #151b26;
-  --vp-button-alt-hover-bg: #1c2433;
-  --vp-button-alt-text: #f1ebe0;
+  --vp-button-alt-bg: #121821;
+  --vp-button-alt-hover-bg: #181f2a;
+  --vp-button-alt-text: #ebe8e2;
 
-  --vp-home-hero-name-color: #f1ebe0;
+  --vp-home-hero-name-color: #ebe8e2;
   --vp-home-hero-name-background: none;
 
   --vp-font-family-base: 'IBM Plex Sans', 'Noto Sans SC', system-ui, sans-serif;
@@ -43,8 +44,8 @@
 
   --vp-nav-bg-color: rgba(7, 9, 13, 0.92);
   --vp-sidebar-bg-color: #07090d;
-  --vp-code-bg: #0e131b;
-  --vp-code-block-bg: #0c1017;
+  --vp-code-bg: #0c1118;
+  --vp-code-block-bg: #0b0f14;
   --vp-local-nav-bg-color: rgba(7, 9, 13, 0.94);
 
   color-scheme: dark;
@@ -81,7 +82,7 @@ body {
   align-items: center;
 }
 
-/* —— 顶栏菜单：金融终端感（墨黑 + 香槟金） —— */
+/* —— 顶栏菜单：金融终端感（墨黑 + 低剂量香槟金） —— */
 .VPNavBarMenu {
   gap: 0.15rem !important;
 }
@@ -97,7 +98,7 @@ body {
   font-size: 0.78rem !important;
   font-weight: 500 !important;
   letter-spacing: 0.08em;
-  color: rgba(241, 235, 224, 0.62) !important;
+  color: rgba(235, 232, 226, 0.58) !important;
   transition:
     color 0.18s ease,
     background 0.18s ease;
@@ -105,8 +106,8 @@ body {
 
 .VPNavBarMenu .VPNavBarMenuLink:hover,
 .VPNavBarMenu .VPNavBarMenuGroup .button:hover {
-  color: #e8dfd0 !important;
-  background: rgba(201, 168, 108, 0.06);
+  color: #ebe8e2 !important;
+  background: rgba(148, 163, 184, 0.06);
 }
 
 .VPNavBarMenu .VPNavBarMenuLink::after {
@@ -123,13 +124,13 @@ body {
 }
 
 .VPNavBarMenu .VPNavBarMenuLink:hover::after {
-  background: rgba(201, 168, 108, 0.55);
+  background: rgba(201, 168, 108, 0.4);
   transform: scaleX(1);
 }
 
 .VPNavBarMenu .VPNavBarMenuLink.active {
   color: #d4b483 !important;
-  background: rgba(201, 168, 108, 0.08);
+  background: rgba(201, 168, 108, 0.06);
   font-weight: 560 !important;
 }
 
@@ -140,7 +141,7 @@ body {
 
 /* 外链「DOM 终端」：右侧细竖线分隔感，不抢 active */
 .VPNavBarMenu .VPNavBarMenuLink[href^="http"] {
-  color: rgba(212, 180, 131, 0.78) !important;
+  color: rgba(212, 180, 131, 0.72) !important;
 }
 
 .VPNavBarMenu .VPNavBarMenuLink[href^="http"]:hover {
@@ -195,7 +196,7 @@ body {
 }
 
 .VPDoc h3 {
-  color: #e8dfd0;
+  color: #e4e0d8;
   font-weight: 520;
 }
 
@@ -206,7 +207,7 @@ body {
 
 .VPDoc img {
   border-radius: 8px;
-  border: 1px solid rgba(201, 168, 108, 0.14);
+  border: 1px solid rgba(148, 163, 184, 0.12);
   box-shadow: none;
   margin: 1.25rem 0 0.5rem;
 }
@@ -230,8 +231,8 @@ body {
 }
 
 .VPDoc th {
-  background: rgba(201, 168, 108, 0.06);
-  color: #e8dfd0;
+  background: rgba(148, 163, 184, 0.05);
+  color: #e4e0d8;
   font-weight: 520;
 }
 
@@ -245,7 +246,7 @@ body {
 }
 
 .custom-block.tip {
-  border-color: rgba(201, 168, 108, 0.28);
+  border-color: rgba(201, 168, 108, 0.22);
 }
 
 .VPButton.brand {

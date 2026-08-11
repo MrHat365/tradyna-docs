@@ -88,8 +88,8 @@ const steps = [
   --gold: #c9a86c;
   --gold-hi: #d4b483;
   --ink: #07090d;
-  --cream: #f1ebe0;
-  --muted: #b7bfcb;
+  --cream: #ebe8e2;
+  --muted: #a8b0bd;
   --dim: #6b7380;
 
   position: relative;
@@ -149,7 +149,7 @@ const steps = [
   background: linear-gradient(
     to bottom,
     transparent,
-    rgba(201, 168, 108, 0.06),
+    rgba(201, 168, 108, 0.035),
     transparent
   );
   animation: scan-sweep 6.2s ease-in-out infinite;
@@ -198,7 +198,7 @@ const steps = [
   height: 52px;
   display: block;
   object-fit: contain;
-  filter: drop-shadow(0 0 12px rgba(201, 168, 108, 0.18));
+  filter: drop-shadow(0 0 10px rgba(201, 168, 108, 0.1));
 }
 
 .hs-brand-text {
@@ -255,8 +255,8 @@ const steps = [
   font-size: 0.68rem;
   letter-spacing: 0.08em;
   padding: 0.28rem 0.55rem;
-  border: 1px solid rgba(201, 168, 108, 0.32);
-  color: var(--gold-hi);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  color: var(--muted);
   background: rgba(7, 9, 13, 0.45);
   backdrop-filter: blur(6px);
   border-radius: 3px;
@@ -296,7 +296,7 @@ const steps = [
   text-decoration: none;
   font-size: 0.95rem;
   letter-spacing: 0.02em;
-  border-bottom: 1px solid rgba(201, 168, 108, 0.4);
+  border-bottom: 1px solid rgba(201, 168, 108, 0.28);
   padding-bottom: 1px;
   text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
   transition: color 0.2s ease, border-color 0.2s ease;
@@ -339,7 +339,7 @@ const steps = [
 }
 
 .hs-step:hover {
-  background: rgba(201, 168, 108, 0.05);
+  background: rgba(148, 163, 184, 0.05);
   color: var(--cream);
 }
 
