@@ -36,6 +36,7 @@ export default defineConfig({
     siteTitle: 'Tradyna',
     nav: [
       { text: '快速开始', link: '/guide/getting-started' },
+      { text: '账户', link: '/guide/accounts' },
       {
         text: 'DOM 终端',
         link: 'https://trader.tradyna.cc/',
@@ -55,10 +56,18 @@ export default defineConfig({
         ],
       },
       {
+        text: '账户管理',
+        items: [
+          { text: '账户是什么', link: '/guide/accounts' },
+          { text: '添加交易所账户', link: '/guide/accounts-add' },
+          { text: '测连、编辑与删除', link: '/guide/accounts-manage' },
+          { text: '多交易所字段对照', link: '/guide/accounts-exchanges' },
+        ],
+      },
+      {
         text: '交易',
         items: [
           { text: 'DOM 交易终端', link: '/guide/dom' },
-          { text: '账户与权限', link: '/guide/accounts' },
         ],
       },
       {

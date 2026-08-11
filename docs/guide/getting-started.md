@@ -30,20 +30,22 @@
 
 <figure>
   <img src="/screenshots/02-dashboard.png" alt="主仪表盘" />
-  <figcaption>主仪表盘：选账户、看入口、打开 DOM。</figcaption>
+  <figcaption>主仪表盘：看入口、打开各管理页。</figcaption>
 </figure>
 
 检查清单：
 
-1. **账户**页里能看到你有权限的交易账户
-2. 若列表为空，请联系管理员添加并授权
+1. 左侧 **账户** 里能看到可用交易账户；没有则按 [添加交易所账户](/guide/accounts-add) 接入（或找管理员添加/转移）
+2. 行内测连显示 **验证成功**（见 [测连、编辑与删除](/guide/accounts-manage)）
 3. **交易规则**里目标交易所的品种已同步（否则可能选不到品种）
 
 ## 3. 打开第一扇 DOM
 
-在概览或账户行点 **DOM**，或选好账户与品种后打开。窗口地址大致形如：
+1. 打开 **交易规则**
+2. 选交易所页签 → 下拉选好 **交易账户**
+3. 在品种行点 **DOM**（独立窗口，不是页面内嵌框）
 
-`/dom?symbol=BTCUSDT&account=你的账户`
+窗口地址大致形如：`/dom?symbol=BTCUSDT&account=你的账户`
 
 <figure>
   <img src="/screenshots/03-dom-ladder.png" alt="DOM 价格梯子" />
@@ -55,6 +57,8 @@
 1. 等行情就绪（梯子有深度）
 2. 设好侧栏下单量
 3. 在梯子上点一档试试挂单 / 撤单（实盘前先确认你们环境允许交易）
+
+选账户细节见 [在 DOM 里选用账户](/guide/accounts-manage#在-dom-里选用账户)。
 
 ## 4. （可选）开网格
 
@@ -69,4 +73,4 @@
 
 ---
 
-接下来建议读：[登录与界面导览](/guide/login) → [DOM 交易终端](/guide/dom)。
+接下来建议读：[登录与界面导览](/guide/login) → [账户是什么](/guide/accounts) → [DOM 交易终端](/guide/dom)。

@@ -5,8 +5,9 @@ const venues = ['Bitget', 'WEEX', 'Gate', 'Binance']
 
 const steps = [
   { n: '01', t: '登录', h: '/guide/login' },
-  { n: '02', t: 'DOM 点价', h: '/guide/dom' },
-  { n: '03', t: '网格策略', h: '/guide/classic-grid' },
+  { n: '02', t: '添加账户', h: '/guide/accounts-add' },
+  { n: '03', t: 'DOM 点价', h: '/guide/dom' },
+  { n: '04', t: '网格策略', h: '/guide/classic-grid' },
 ]
 </script>
 
@@ -45,7 +46,7 @@ const steps = [
 
         <h1 class="hs-title">多交易所永续 DOM 终端</h1>
         <p class="hs-lead">
-          登录、点价、网格与控制台——只讲你会用到的操作。
+          登录、加账户、点价与网格——只讲你会用到的操作。
         </p>
 
         <div class="hs-venues" aria-label="支持的交易所">
@@ -317,7 +318,7 @@ const steps = [
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   background: rgba(7, 9, 13, 0.96);
   border-bottom: 1px solid rgba(148, 163, 184, 0.08);
 }
@@ -373,6 +374,7 @@ const steps = [
   .hs-path {
     grid-template-columns: 1fr;
   }
+  /* keep single-column stack on narrow screens */
   .hs-step {
     border-right: none;
     border-bottom: 1px solid rgba(148, 163, 184, 0.08);
