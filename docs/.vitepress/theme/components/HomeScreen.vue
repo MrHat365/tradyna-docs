@@ -16,14 +16,8 @@ const steps = [
     <!-- edge-to-edge product plane -->
     <div class="hs-hero">
       <div class="hs-shot-wrap" aria-hidden="true">
-        <img
-          class="hs-shot"
-          src="/screenshots/03-dom-ladder.png"
-          alt=""
-          width="1440"
-          height="900"
-          decoding="async"
-        />
+        <!-- CSS background：右键走页面菜单，不出「图片另存为」 -->
+        <div class="hs-shot" />
         <div class="hs-shot-sheen" />
         <div class="hs-shot-scan" />
         <div class="hs-shot-veil" />
@@ -112,15 +106,19 @@ const steps = [
   inset: 0;
   z-index: 0;
   background: #0a0c10;
+  pointer-events: none;
+  user-select: none;
 }
 
 .hs-shot {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  background-color: #0a0c10;
+  background-image: url('/screenshots/03-dom-ladder.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   /* 钉右侧，避免 cover+scale 切掉 EXECUTION 面板 */
-  object-position: right 14%;
+  background-position: right 14%;
   transform: scale(1.02);
   animation: shot-in 1.15s cubic-bezier(0.22, 1, 0.36, 1) both,
     shot-parallax 24s ease-in-out infinite alternate;
@@ -361,7 +359,7 @@ const steps = [
     min-height: calc(100vh - 64px - 160px);
   }
   .hs-shot {
-    object-position: right 10%;
+    background-position: right 10%;
   }
   .hs-shot-veil {
     background:
@@ -409,10 +407,10 @@ const steps = [
 
 @keyframes shot-parallax {
   from {
-    object-position: right 10%;
+    background-position: right 10%;
   }
   to {
-    object-position: right 22%;
+    background-position: right 22%;
   }
 }
 
@@ -454,7 +452,7 @@ const steps = [
   .hs-shot {
     opacity: 1;
     transform: scale(1);
-    object-position: right 14%;
+    background-position: right 14%;
   }
 }
 </style>
