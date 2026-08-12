@@ -34,19 +34,7 @@ export default defineConfig({
   themeConfig: {
     logo: '/brand/logo.svg',
     siteTitle: 'Tradyna',
-    nav: [
-      { text: '快速开始', link: '/guide/getting-started' },
-      { text: '账户', link: '/guide/accounts' },
-      {
-        text: 'DOM 终端',
-        link: 'https://trader.tradyna.cc/',
-        target: '_blank',
-        rel: 'noopener noreferrer',
-      },
-      { text: '经典网格', link: '/guide/classic-grid' },
-      { text: '高级网格', link: '/guide/pro-grid' },
-      { text: '常见问题', link: '/guide/faq' },
-    ],
+    nav: [],
     sidebar: [
       {
         text: '入门',
