@@ -119,8 +119,9 @@ const steps = [
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 58% 12%;
-  transform: scale(1.06);
+  /* 钉右侧，避免 cover+scale 切掉 EXECUTION 面板 */
+  object-position: right 14%;
+  transform: scale(1.02);
   animation: shot-in 1.15s cubic-bezier(0.22, 1, 0.36, 1) both,
     shot-parallax 24s ease-in-out infinite alternate;
   filter: saturate(1.06) contrast(1.05) brightness(0.92);
@@ -360,7 +361,7 @@ const steps = [
     min-height: calc(100vh - 64px - 160px);
   }
   .hs-shot {
-    object-position: 72% 10%;
+    object-position: right 10%;
   }
   .hs-shot-veil {
     background:
@@ -398,20 +399,20 @@ const steps = [
 @keyframes shot-in {
   from {
     opacity: 0;
-    transform: scale(1.12);
+    transform: scale(1.06);
   }
   to {
     opacity: 1;
-    transform: scale(1.06);
+    transform: scale(1.02);
   }
 }
 
 @keyframes shot-parallax {
   from {
-    object-position: 54% 10%;
+    object-position: right 10%;
   }
   to {
-    object-position: 64% 18%;
+    object-position: right 22%;
   }
 }
 
@@ -452,7 +453,8 @@ const steps = [
   }
   .hs-shot {
     opacity: 1;
-    transform: scale(1.02);
+    transform: scale(1);
+    object-position: right 14%;
   }
 }
 </style>
